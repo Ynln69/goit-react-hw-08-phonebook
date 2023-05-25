@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import LogInIcon from './../../images/login.png';
+import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -26,7 +28,9 @@ const LoginForm = () => {
         Password
         <input type="password" name="password" />
       </label>
-      <button type="submit">Log In</button>
+      <ButtonIcon type="submit">
+        <img src={LogInIcon} alt="Изображение" width="40px" height="40px" />
+      </ButtonIcon>
     </form>
   );
 };

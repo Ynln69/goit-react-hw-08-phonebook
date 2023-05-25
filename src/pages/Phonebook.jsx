@@ -1,14 +1,14 @@
 import ContactsList from 'components/ContactsList/ContactsList';
 import FilterContacts from 'components/Filter/Filter';
-import { PhoneForm } from 'components/PhoneForm/PhoneForm.styled';
+import Form from 'components/PhoneForm/PhoneForm';
 
 const Phonebook = () => {
   return (
-    <>
-      <PhoneForm />
+    <section>
+      <Form />
       <FilterContacts />
       <ContactsList />
-    </>
+    </section>
   );
 };
 

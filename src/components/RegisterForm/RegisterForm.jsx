@@ -1,37 +1,46 @@
+import { Input, Button } from '@chakra-ui/react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import SingUpIcon from './../../images/sign-up.png';
+import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+    dispatch(register({ name, email, password }));
     form.reset();
   };
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off">
       <label>
-        Username
-        <input type="text" name="name" />
+        <input type="text" name="name" placeholder="Enter your name" />
       </label>
       <label>
-        Email
-        <input type="email" name="email" />
+        <input type="email" name="email" placeholder="Enter email" />
       </label>
       <label>
-        Password
-        <input type="password" name="password" />
+        <Input
+          type={show ? 'text' : 'password'}
+          name="password"
+          placeholder="Enter password"
+        />
+        <Button type="button" h="1.75rem" size="sm" onClick={handleClick}>
+          {show ? 'Hide' : 'Show'}
+        </Button>
       </label>
-      <button type="submit">Register</button>
+      <ButtonIcon type="submit">
+        <img src={SingUpIcon} alt="Изображение" width="40px" height="40px" />
+      </ButtonIcon>
     </form>
   );
 };

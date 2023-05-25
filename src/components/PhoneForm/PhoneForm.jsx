@@ -15,7 +15,6 @@ import { getContacts } from 'redux/selectors';
 
 const Form = () => {
   const [name, setName] = useState('');
-
   const [phone, setPhone] = useState('');
 
   const dispatch = useDispatch();
@@ -56,7 +55,7 @@ const Form = () => {
 
   return (
     <FormBox>
-      <FormTitle>Phonebook</FormTitle>
+      <FormTitle>Add your contacts</FormTitle>
       <PhoneForm onSubmit={handelSubmit}>
         <FormLabel>
           Name
