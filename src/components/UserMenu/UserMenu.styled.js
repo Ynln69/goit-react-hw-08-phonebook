@@ -5,7 +5,7 @@ export const Userbox = styled.div`
   align-items: center;
   gap: 10px;
   > p {
-    color: #9cc9f5;
+    color: #fff;
   }
 `;
 

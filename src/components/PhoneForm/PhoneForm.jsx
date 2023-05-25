@@ -2,6 +2,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { ReactComponent as PhoneIcon } from './../../images/phone.svg';
+import { ReactComponent as UserIcon } from './../../images/user.svg';
 
 import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
@@ -11,7 +13,6 @@ import {
   FormInput,
   FormButton,
   FormBox,
-  FormTitle,
 } from './PhoneForm.styled';
 
 const Form = () => {
@@ -56,8 +57,8 @@ const Form = () => {
 
   return (
     <FormBox>
-      <FormTitle>Add your contacts</FormTitle>
       <PhoneForm onSubmit={handelSubmit}>
+        <h2>Add your contacts</h2>
         <FormLabel>
           <FormInput
             type="text"
@@ -69,6 +70,7 @@ const Form = () => {
             value={name}
             onChange={handelChange}
           />
+          <UserIcon width="18px" />
         </FormLabel>
         <FormLabel>
           <FormInput
@@ -81,6 +83,7 @@ const Form = () => {
             value={number}
             onChange={handelChange}
           />
+          <PhoneIcon width="18px" />
         </FormLabel>
         <FormButton type="submit">Add Contact</FormButton>
       </PhoneForm>

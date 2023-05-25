@@ -23,10 +23,11 @@ export const ItemButton = styled.button`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   cursor: pointer;
+  opacity: 0.8;
 
-  background-color: transparent;
+  background-color: #fa8072;
 
   &:hover {
-    background-color: #fa8072;
+    opacity: 1;
   }
 `;

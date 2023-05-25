@@ -30,9 +30,12 @@ const ContactsList = () => {
       {visibleContacts.map(({ id, name, number }) => (
         <Items key={id}>
           {name}: {number}
-          <ItemButton type="button" onClick={() => handleDelete(id)}>
-            <DeleteIcon />
-          </ItemButton>
+          <div>
+            <ItemButton></ItemButton>
+            <ItemButton type="button" onClick={() => handleDelete(id)}>
+              <DeleteIcon />
+            </ItemButton>
+          </div>
         </Items>
       ))}
     </ListOfContact>

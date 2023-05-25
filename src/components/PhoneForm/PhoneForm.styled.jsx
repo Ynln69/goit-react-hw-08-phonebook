@@ -2,10 +2,14 @@ import styled from '@emotion/styled';
 
 export const FormBox = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
+  box-shadow: 0px 0px 15px 10px #f1f1f1;
   border-radius: 5px;
+
+  background-color: #fcfdfd;
   > p {
     text-align: center;
     font-size: 25px;
@@ -13,50 +17,53 @@ export const FormBox = styled.div`
   }
 `;
 
-export const FormTitle = styled.h2`
-  font-size: 30px;
-  color: #000;
-`;
-
 export const PhoneForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   padding: 8px;
 `;
 
 export const FormLabel = styled.label`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: flex-start;
   gap: 5px;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 
-  font-size: 20px;
+  color: #495057;
+  background-clip: padding-box;
+  background-color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  > svg {
+    fill: currentcolor;
+  }
 `;
 
 export const FormInput = styled.input`
-border: none;
-border-bottom: 1px solid black;
-outline: none;
+  border: none;
+  outline: none;
 
-color: currentcolor;
-background-color: transparent;
-font-family: inherit;
-font-size: 20px;
-}
+  color: currentcolor;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 16px;
 `;
 
 export const FormButton = styled.button`
-  padding: 15px 25px;
-  border: 2px solid #4f2ee8;
-  border-radius: 40px;
+  padding: 8px 18px;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
 
-  background-color: transparent;
-  font-weight: 700;
+  color: #fff;
+  background-color: #3e7e80;
   font-size: 15px;
-  color: currentColor;
   &:hover {
     background-color: #4f2ee8;
   }

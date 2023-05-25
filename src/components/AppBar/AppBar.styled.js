@@ -10,19 +10,15 @@ export const Header = styled.header`
 `;
 
 export const Link = styled(NavLink)`
-  padding: 14px 32px;
   border-radius: 4px;
 
-  color: #9cc9f5;
+  color: #fff;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
 
   &.active {
-    color: #fff;
-    background-color: #;
+    color: #9cc9f5;
     box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
-    border-radius: 100px;
   }
 `;

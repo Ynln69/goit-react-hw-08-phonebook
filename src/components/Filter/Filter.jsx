@@ -1,7 +1,9 @@
 import { useDispatch } from 'react-redux';
+import { ReactComponent as SearchIcon } from './../../images/search.svg';
 
 import { getContactsFilter } from 'redux/filterSlice';
-import { FilterLabel, FilterInput } from './Filter.styled';
+import { FilterBox } from './Filter.styled';
+import { FormLabel, FormInput } from 'components/PhoneForm/PhoneForm.styled';
 
 const FilterContacts = () => {
   const changeFilter = e => {
@@ -10,15 +12,16 @@ const FilterContacts = () => {
 
   const dispatch = useDispatch();
   return (
-    <div>
-      <FilterLabel>
-        <FilterInput
+    <FilterBox>
+      <FormLabel>
+        <SearchIcon width="18px" />
+        <FormInput
           type="text"
           onChange={changeFilter}
           placeholder="Find contacts by name"
         />
-      </FilterLabel>
-    </div>
+      </FormLabel>
+    </FilterBox>
   );
 };
 
