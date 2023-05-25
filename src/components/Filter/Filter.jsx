@@ -12,8 +12,11 @@ const FilterContacts = () => {
   return (
     <div>
       <FilterLabel>
-        Find contacts by name
-        <FilterInput type="text" onChange={changeFilter} />
+        <FilterInput
+          type="text"
+          onChange={changeFilter}
+          placeholder="Find contacts by name"
+        />
       </FilterLabel>
     </div>
   );

@@ -1,12 +1,12 @@
 body {
-  font-family: 'Kalam', cursive;
+  font-family: 'Mulish';
   font-weight: 400;
   line-height: 1.2;
   position: relative;
   margin: 0;
-  background-color: #8f9779;
+  background-color: #dcdcdc;
   scroll-behavior: smooth;
-  color: #f0f8ff;
+  color: #000;
 }
 
 h1,
@@ -16,6 +16,8 @@ p {
   margin: 0;
 }
 
-ol {
+ul {
+  padding: 0;
   margin: 0;
+  list-style: none;
 }

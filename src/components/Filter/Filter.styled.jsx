@@ -11,10 +11,10 @@ export const FilterLabel = styled.label`
 export const FilterInput = styled.input`
   padding: 4px;
   border: none;
-  border-radius: 3px;
+  border-bottom: 1px solid black;
   outline: none;
-  color: #fff;
-  background-color: #2f303a;
+  color: inferit;
+  background-color: transparent;
   font-size: 20px;
   font-family: inherit;
 `;

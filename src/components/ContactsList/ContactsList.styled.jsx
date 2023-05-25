@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-export const ListOfContact = styled.ol`
+export const ListOfContact = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   font-size: 20px;
 `;
 
@@ -12,19 +12,21 @@ export const Items = styled.li`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 100px;
 `;
 export const ItemButton = styled.button`
-  padding: 5px 15px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #fa8072;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  background-color: #fa8072;
-  font-weight: 700;
-  font-size: 15px;
-  color: currentColor;
+
+  background-color: transparent;
 
   &:hover {
-    background-color: #8b0000;
+    background-color: #fa8072;
   }
 `;

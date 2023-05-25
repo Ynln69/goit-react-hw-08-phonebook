@@ -1,8 +1,8 @@
-import { Input, Button } from '@chakra-ui/react';
+import { Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import SingUpIcon from './../../images/sign-up.png';
+import { FormRegist, BtnHide } from './RegisterForm.styled';
 import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
 
 export const RegisterForm = () => {
@@ -13,34 +13,35 @@ export const RegisterForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    const name = form.elements.name.value;
-    const email = form.elements.email.value;
-    const password = form.elements.password.value;
-    dispatch(register({ name, email, password }));
+    dispatch(
+      register({
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
     form.reset();
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <FormRegist onSubmit={handleSubmit} autoComplete="off">
       <label>
-        <input type="text" name="name" placeholder="Enter your name" />
+        <input type="text" name="name" placeholder="Name" />
       </label>
       <label>
-        <input type="email" name="email" placeholder="Enter email" />
+        <input type="email" name="email" placeholder="Email" />
       </label>
       <label>
         <Input
           type={show ? 'text' : 'password'}
           name="password"
-          placeholder="Enter password"
+          placeholder="Password"
         />
-        <Button type="button" h="1.75rem" size="sm" onClick={handleClick}>
+        <BtnHide type="button" h="1.75rem" size="sm" onClick={handleClick}>
           {show ? 'Hide' : 'Show'}
-        </Button>
+        </BtnHide>
       </label>
-      <ButtonIcon type="submit">
-        <img src={SingUpIcon} alt="Изображение" width="40px" height="40px" />
-      </ButtonIcon>
-    </form>
+      <ButtonIcon type="submit">Register</ButtonIcon>
+    </FormRegist>
   );
 };

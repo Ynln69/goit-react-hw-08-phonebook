@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { ReactComponent as DeleteIcon } from './../../images/trash.svg';
 
 import { getLoading, getError, getVisibleContacts } from 'redux/selectors';
 import { deleteContact, fetchContacts } from 'redux/operations';
@@ -26,11 +27,11 @@ const ContactsList = () => {
   return (
     <ListOfContact>
       {isLoading && !error && <b>Loading...</b>}
-      {visibleContacts.map(({ id, name, phoneNumber }) => (
+      {visibleContacts.map(({ id, name, number }) => (
         <Items key={id}>
-          {name}:<br /> {phoneNumber}
+          {name}: {number}
           <ItemButton type="button" onClick={() => handleDelete(id)}>
-            Delete
+            <DeleteIcon />
           </ItemButton>
         </Items>
       ))}

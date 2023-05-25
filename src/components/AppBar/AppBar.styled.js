@@ -6,21 +6,22 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 20px 16px;
+  background-color: #243238;
 `;
 
 export const Link = styled(NavLink)`
   padding: 14px 32px;
   border-radius: 4px;
 
-  color: #483d8b;
+  color: #9cc9f5;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
 
   &.active {
-    color: white;
-    background-color: #483d8b;
+    color: #fff;
+    background-color: #;
     box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
     border-radius: 100px;
   }

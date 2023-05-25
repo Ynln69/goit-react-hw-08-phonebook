@@ -2,6 +2,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
 import {
   PhoneForm,
@@ -11,11 +13,10 @@ import {
   FormBox,
   FormTitle,
 } from './PhoneForm.styled';
-import { getContacts } from 'redux/selectors';
 
 const Form = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
 
@@ -25,8 +26,8 @@ const Form = () => {
       case 'name':
         setName(value);
         break;
-      case 'phone':
-        setPhone(value);
+      case 'number':
+        setNumber(value);
         break;
 
       default:
@@ -45,12 +46,12 @@ const Form = () => {
       return;
     }
 
-    const data = { name, phone };
+    const data = { name, number };
     dispatch(addContact(data));
     toast.success(`Contact ${name} added successfully`);
 
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   return (
@@ -58,10 +59,10 @@ const Form = () => {
       <FormTitle>Add your contacts</FormTitle>
       <PhoneForm onSubmit={handelSubmit}>
         <FormLabel>
-          Name
           <FormInput
             type="text"
             name="name"
+            placeholder="Name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
@@ -70,14 +71,14 @@ const Form = () => {
           />
         </FormLabel>
         <FormLabel>
-          Number
           <FormInput
             type="tel"
-            name="phone"
+            name="number"
+            placeholder="Number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
-            value={phone}
+            value={number}
             onChange={handelChange}
           />
         </FormLabel>

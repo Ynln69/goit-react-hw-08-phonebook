@@ -1,10 +1,16 @@
 import LoginForm from 'components/LoginForm/LoginForm';
+import { RegisterBox, RegisterSection } from './Register.styled';
+
+import IconProfile from '../images/icon-profile.png';
 
 const Login = () => {
   return (
-    <>
-      <LoginForm />
-    </>
+    <RegisterSection>
+      <RegisterBox>
+        <img src={IconProfile} alt="" width="200px" />
+        <LoginForm />
+      </RegisterBox>
+    </RegisterSection>
   );
 };
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 // Utility to remove JWT
 const setAuthHeader = token => {
@@ -40,25 +40,25 @@ export const logIn = createAsyncThunk(
 
 export const logOut = createAsyncThunk('auth/logOut', async (_, thunkAPI) => {
   try {
-    const response = await axios.post('/users/logout');
+    await axios.post('/users/logout');
     clearAuthHeader();
-    return response.data;
   } catch (e) {
     return thunkAPI.rejectWithValue(e.message);
   }
 });
 
 export const refreshUser = createAsyncThunk(
-  'auth/refreshingUser',
+  'auth/refresh',
   async (_, thunkAPI) => {
-    const { token } = thunkAPI.getState().auth;
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
 
-    if (!token) {
+    if (persistedToken === null) {
       return thunkAPI.rejectWithValue('Unable to fetch user');
     }
 
     try {
-      setAuthHeader(token);
+      setAuthHeader(persistedToken);
       const res = await axios.get('/users/current');
       return res.data;
     } catch (error) {
