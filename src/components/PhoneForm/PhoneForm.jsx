@@ -57,8 +57,8 @@ const Form = () => {
 
   return (
     <FormBox>
+      <h2>Add your contacts</h2>
       <PhoneForm onSubmit={handelSubmit}>
-        <h2>Add your contacts</h2>
         <FormLabel>
           <FormInput
             type="text"

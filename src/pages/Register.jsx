@@ -1,12 +1,14 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 import { RegisterSection, RegisterBox } from './Register.styled';
-import IconProfile from '../images/icon-profile.png';
+
+// import IconProfile from '../images/icon-profile.png';
 
 const Register = () => {
   return (
     <RegisterSection>
       <RegisterBox>
-        <img src={IconProfile} alt="" width="200px" />
+        {/* <UserIcon src={IconProfile} alt="" width="150px" />*/}
+        <h2>Sing Up</h2>
         <RegisterForm />
       </RegisterBox>
     </RegisterSection>

@@ -1,9 +1,20 @@
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+
 import { logIn } from 'redux/auth/operations';
-import { FormRegist } from 'components/RegisterForm/RegisterForm.styled';
+
+import { ReactComponent as OpenIcon } from './../../images/eye.svg';
+import { ReactComponent as CloseIcon } from './../../images/eye-blocked.svg';
+
+import {
+  FormRegist,
+  BtnHide,
+} from 'components/RegisterForm/RegisterForm.styled';
 import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
 
 const LoginForm = () => {
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(!show);
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -24,9 +35,16 @@ const LoginForm = () => {
         <input type="email" name="email" placeholder="Email" />
       </label>
       <label>
-        <input type="password" name="password" placeholder="Password" />
+        <input
+          type={show ? 'text' : 'password'}
+          name="password"
+          placeholder="Password"
+        />
+        <BtnHide type="button" h="1.75rem" size="sm" onClick={handleClick}>
+          {show ? <OpenIcon width="18px" /> : <CloseIcon width="18px" />}
+        </BtnHide>
       </label>
-      <ButtonIcon type="submit">Login In</ButtonIcon>
+      <ButtonIcon type="submit">Login</ButtonIcon>
     </FormRegist>
   );
 };

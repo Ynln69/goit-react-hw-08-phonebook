@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { FormRegist, BtnHide } from './RegisterForm.styled';
-import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
+import { ReactComponent as OpenIcon } from './../../images/eye.svg';
+import { ReactComponent as CloseIcon } from './../../images/eye-blocked.svg';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -38,10 +39,10 @@ export const RegisterForm = () => {
           placeholder="Password"
         />
         <BtnHide type="button" h="1.75rem" size="sm" onClick={handleClick}>
-          {show ? 'Hide' : 'Show'}
+          {show ? <OpenIcon width="18px" /> : <CloseIcon width="18px" />}
         </BtnHide>
       </label>
-      <ButtonIcon type="submit">Register</ButtonIcon>
+      <button type="submit">Register</button>
     </FormRegist>
   );
 };

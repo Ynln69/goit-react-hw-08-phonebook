@@ -8,8 +8,8 @@ export const getError = state => state.contacts.error;
 export const getVisibleContacts = createSelector(
   [getContacts, getFilteredContacts],
   (contacts, filter) => {
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter)
+    return contacts.filter(({ name }) =>
+      name.toLowerCase().includes(filter.toLowerCase())
     );
   }
 );

@@ -6,11 +6,8 @@ export const PhonebookSection = styled.section`
   align-items: flex-start;
   gap: 50px;
   flex-wrap: nowrap;
-
   justify-content: center;
   padding: 50px;
-
-  background-size: cover;
 `;
 
 export const FilterContainer = styled.div`

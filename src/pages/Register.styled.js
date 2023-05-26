@@ -1,26 +1,39 @@
 import styled from '@emotion/styled';
+import BgSection from '../images/bg-registration.jpg';
 
 export const RegisterSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 150px 0;
+  padding: 130px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(${BgSection});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
 
 export const RegisterBox = styled.div`
   position: relative;
-  padding-top: 140px;
+  display: flex;
+  gap: 20px;
+  padding-top: 40px;
   padding-right: 30px;
   padding-bottom: 40px;
   padding-left: 30px;
-  border: 2px solid #111111;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px -1px;
+  backdrop-filter: blur(2px);
   border-radius: 18px;
 
-  background: #f6f6f6;
-  > img {
-    position: absolute;
-    left: 23%;
-    top: -23%;
+  background-color: rgba(0, 0, 0, 0.3);
+  > h2 {
+    color: #fff;
   }
+`;
+
+export const UserIcon = styled.img`
+  position: absolute;
+  left: 27%;
+  top: -26%;
 `;

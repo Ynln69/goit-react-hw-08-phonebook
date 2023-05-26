@@ -13,7 +13,7 @@ export const Link = styled(NavLink)`
   border-radius: 4px;
 
   color: #fff;
-  font-weight: 500;
+  font-weight: 900;
   text-decoration: none;
   text-align: center;
 

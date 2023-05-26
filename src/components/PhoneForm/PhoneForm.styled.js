@@ -60,11 +60,12 @@ export const FormButton = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  opacity: 0.8;
 
   color: #fff;
   background-color: #3e7e80;
   font-size: 15px;
   &:hover {
-    background-color: #4f2ee8;
+    opacity: 1;
   }
 `;
