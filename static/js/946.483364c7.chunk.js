@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[946],{6946:function(e,t,n){n.r(t),n.d(t,{default:function(){return o}});var r,a=n(168),c=n(9584).Z.h1(r||(r=(0,a.Z)(["\n  text-align: center;\n  margin-right: auto;\n  margin-left: auto;\n  margin-top: 50px;\n"]))),i=n(3329),o=function(){return(0,i.jsx)("section",{style:{padding:"30px"},children:(0,i.jsx)(c,{children:' "Streamline your contacts effortlessly!"'})})}}}]);
+//# sourceMappingURL=946.483364c7.chunk.js.map
