@@ -36,9 +36,12 @@ const authSlice = createSlice({
       .addMatcher(isAnyOf(refreshUser.pending), state => {
         state.isRefreshing = true;
       })
-      .addMatcher(isAnyOf(refreshUser.rejected), state => {
-        state.isRefreshing = false;
-      });
+      .addMatcher(
+        isAnyOf(refreshUser.rejected, logIn.rejected, register.rejected),
+        state => {
+          state.isRefreshing = false;
+        }
+      );
   },
 });
 

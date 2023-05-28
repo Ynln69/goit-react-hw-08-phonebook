@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const ListOfContact = styled.ul`
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -22,6 +23,8 @@ export const Items = styled.li`
     border: none;
     border-bottom: 1px solid black;
     outline: none;
+    font-family: inherit;
+    font-size: 14px;
   }
 `;
 export const DeleteButton = styled.button`

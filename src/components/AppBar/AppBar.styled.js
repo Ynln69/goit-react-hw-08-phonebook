@@ -7,6 +7,7 @@ export const Header = styled.header`
   justify-content: space-between;
   padding: 20px 16px;
   background-color: #243238;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const Link = styled(NavLink)`

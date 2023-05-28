@@ -6,7 +6,7 @@ import { ReactComponent as DeleteIcon } from './../../images/trash.svg';
 import { ReactComponent as EditIcon } from './../../images/pencil2.svg';
 import { ReactComponent as SaveIcon } from './../../images/save.svg';
 
-import { getLoading, getError, getVisibleContacts } from 'redux/selectors';
+import { getLoading, getVisibleContacts } from 'redux/selectors';
 import { deleteContact, fetchContacts, editContact } from 'redux/operations';
 
 import {
@@ -19,21 +19,14 @@ import {
 const ContactsList = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(getLoading);
-  const error = useSelector(getError);
   const [editingContact, setEditingContact] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+
+  const visibleContacts = useSelector(getVisibleContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-
-  useEffect(() => {
-    if (!isEditing) {
-      dispatch(fetchContacts());
-    }
-  }, [dispatch, isEditing]);
-
-  const visibleContacts = useSelector(getVisibleContacts);
 
   const handleDelete = contactId => {
     const confirmation = window.confirm('Are you want to delete this contact?');
@@ -56,7 +49,6 @@ const ContactsList = () => {
 
   return (
     <ListOfContact>
-      {isLoading && !error && <b>Loading...</b>}
       {visibleContacts.map(({ id, name, number }) => (
         <Items key={id}>
           {isEditing && editingContact?.id === id ? (
@@ -103,6 +95,7 @@ const ContactsList = () => {
           </div>
         </Items>
       ))}
+      {isLoading && visibleContacts.length === 0 && <b>No contacts</b>}
     </ListOfContact>
   );
 };
