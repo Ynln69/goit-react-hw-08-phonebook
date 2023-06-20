@@ -16,7 +16,7 @@ const Home = () => {
         <img src={Logo} alt="logo" width="200px" />
       </TextBox>
       <div>
-        <img src={Phone} alt="smartphone" />
+        <img src={Phone} alt="smartphone" width="400px" />
       </div>
     </HomeSection>
   );
