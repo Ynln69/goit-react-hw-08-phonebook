@@ -16,6 +16,7 @@ const HomePage = lazy(() => import('../../pages/Home'));
 const RegisterPage = lazy(() => import('../../pages/Register'));
 const LoginPage = lazy(() => import('../../pages/Login'));
 const PhonebookPage = lazy(() => import('../../pages/Phonebook'));
+const About = lazy(() => import('../../pages/AboutPage'));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="/about" element={About} />
           <Route
             path="/register"
             element={
