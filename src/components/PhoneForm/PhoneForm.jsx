@@ -2,11 +2,13 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ReactComponent as PhoneIcon } from './../../images/phone.svg';
-import { ReactComponent as UserIcon } from './../../images/user.svg';
 
 import { getContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
+
+import { ReactComponent as PhoneIcon } from './../../images/phone.svg';
+import { ReactComponent as UserIcon } from './../../images/user.svg';
+
 import {
   PhoneForm,
   FormLabel,

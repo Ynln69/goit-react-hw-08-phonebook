@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
+import { getContactsFilter } from 'redux/filterSlice';
+
 import { ReactComponent as SearchIcon } from './../../images/search.svg';
 
-import { getContactsFilter } from 'redux/filterSlice';
-import { FilterBox } from './filter.styled';
 import { FormLabel, FormInput } from 'components/PhoneForm/PhoneForm.styled';
+import { FilterBox } from './Filter.styled';
 
 const FilterContacts = () => {
   const changeFilter = e => {

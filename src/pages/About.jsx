@@ -1,5 +1,5 @@
-import { AboutSection, BoxInfo, BoxDesc, BoxText, Title } from './About.styled';
 import Img from '../images/imgfortext.png';
+import { AboutSection, BoxInfo, BoxDesc, BoxText, Title } from './About.styled';
 
 const About = () => {
   return (

@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { Avatar, AvatarGroup } from '@chakra-ui/react';
-import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
+import { Avatar, AvatarGroup } from '@chakra-ui/react';
+
+import { logOut } from 'redux/auth/operations';
 import { Userbox, ButtonIcon } from './UserMenu.styled';
 
 const UserMenu = () => {

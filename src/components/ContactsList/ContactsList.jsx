@@ -2,19 +2,19 @@ import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { getLoading, getVisibleContacts } from 'redux/selectors';
+import { deleteContact, fetchContacts, editContact } from 'redux/operations';
+
 import { ReactComponent as DeleteIcon } from './../../images/trash.svg';
 import { ReactComponent as EditIcon } from './../../images/pencil2.svg';
 import { ReactComponent as SaveIcon } from './../../images/save.svg';
-
-import { getLoading, getVisibleContacts } from 'redux/selectors';
-import { deleteContact, fetchContacts, editContact } from 'redux/operations';
 
 import {
   ListOfContact,
   Items,
   DeleteButton,
   EditBtn,
-} from './contactsList.styled';
+} from './ContactsList.styled';
 
 const ContactsList = () => {
   const dispatch = useDispatch();

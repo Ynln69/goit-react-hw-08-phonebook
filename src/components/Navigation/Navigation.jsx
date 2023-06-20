@@ -1,6 +1,7 @@
 import { useAuth } from 'hooks';
+
 import { NavContainer } from './Navigation.styled';
-import { Link } from 'components/AppBar/appBar.styled';
+import { Link } from 'components/AppBar/AppBar.styled';
 
 const Navigation = () => {
   const { isLoggedIn } = useAuth();

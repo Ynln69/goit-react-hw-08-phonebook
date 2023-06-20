@@ -1,6 +1,7 @@
-import { HomeSection, HomeTitle, TextBox, Border } from './Home.styled';
 import Phone from '../images/phone.png';
 import Logo from '../images/logo.png';
+
+import { HomeSection, HomeTitle, TextBox, Border } from './Home.styled';
 
 const Home = () => {
   return (
