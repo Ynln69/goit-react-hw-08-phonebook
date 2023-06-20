@@ -3,7 +3,6 @@ import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { useAuth } from 'hooks';
-
 import { refreshUser } from 'redux/auth/operations';
 
 import { Layout } from 'components/Layout/Layout';
@@ -16,6 +15,7 @@ const HomePage = lazy(() => import('../../pages/Home'));
 const RegisterPage = lazy(() => import('../../pages/Register'));
 const LoginPage = lazy(() => import('../../pages/Login'));
 const PhonebookPage = lazy(() => import('../../pages/Phonebook'));
+const AboutPage = lazy(() => import('../../pages/About'));
 
 const App = () => {
   const dispatch = useDispatch();
@@ -34,6 +34,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route
             path="/register"
             element={

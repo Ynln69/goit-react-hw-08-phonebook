@@ -1,5 +1,5 @@
-import { AuthNavBox } from './AuthNav.styled';
-import { Link } from 'components/AppBar/AppBar.styled';
+import { AuthNavBox } from './authNav.styled';
+import { Link } from 'components/AppBar/appBar.styled';
 
 const AuthNav = () => {
   return (

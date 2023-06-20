@@ -1,4 +1,4 @@
-import { HomeSection, HomeTitle, TextBox, Border } from './Home.styled';
+import { HomeSection, HomeTitle, TextBox, Border } from './home.styled';
 import Phone from '../images/phone.png';
 import Logo from '../images/logo.png';
 

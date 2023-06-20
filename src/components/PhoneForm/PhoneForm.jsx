@@ -13,7 +13,7 @@ import {
   FormInput,
   FormButton,
   FormBox,
-} from './PhoneForm.styled';
+} from './phoneForm.styled';
 
 const Form = () => {
   const [name, setName] = useState('');

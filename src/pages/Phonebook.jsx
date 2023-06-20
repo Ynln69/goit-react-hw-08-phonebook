@@ -1,4 +1,4 @@
-import { PhonebookSection, FilterContainer } from './Phonebook.styled';
+import { PhonebookSection, FilterContainer } from './phonebook.styled';
 import ContactsList from 'components/ContactsList/ContactsList';
 import FilterContacts from 'components/Filter/Filter';
 import Form from 'components/PhoneForm/PhoneForm';

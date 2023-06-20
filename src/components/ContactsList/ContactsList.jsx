@@ -14,7 +14,7 @@ import {
   Items,
   DeleteButton,
   EditBtn,
-} from './ContactsList.styled';
+} from './contactsList.styled';
 
 const ContactsList = () => {
   const dispatch = useDispatch();

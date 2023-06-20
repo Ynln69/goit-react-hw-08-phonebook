@@ -1,8 +1,13 @@
 import { RotatingLines } from 'react-loader-spinner';
 
 const Loader = () => {
+  const containerStyles = {
+    position: 'absolute',
+    left: '50%',
+    transform: 'translate(-50%)',
+  };
   return (
-    <section>
+    <section style={containerStyles}>
       <RotatingLines
         strokeColor="grey"
         strokeWidth="5"

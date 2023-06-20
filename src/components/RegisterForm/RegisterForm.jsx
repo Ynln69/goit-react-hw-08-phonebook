@@ -2,7 +2,7 @@ import { Input } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { FormRegist, BtnHide } from './RegisterForm.styled';
+import { FormRegist, BtnHide } from './registerForm.styled';
 import { ReactComponent as OpenIcon } from './../../images/eye.svg';
 import { ReactComponent as CloseIcon } from './../../images/eye-blocked.svg';
 

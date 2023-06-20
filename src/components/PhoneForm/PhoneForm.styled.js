@@ -43,6 +43,10 @@ export const FormLabel = styled.label`
   > svg {
     fill: currentcolor;
   }
+  &:focus,
+  &:hover {
+    box-shadow: 0px 1px 9px 2px darkgray;
+  }
 `;
 
 export const FormInput = styled.input`

@@ -9,8 +9,8 @@ import { ReactComponent as CloseIcon } from './../../images/eye-blocked.svg';
 import {
   FormRegist,
   BtnHide,
-} from 'components/RegisterForm/RegisterForm.styled';
-import { ButtonIcon } from 'components/UserMenu/UserMenu.styled';
+} from 'components/RegisterForm/registerForm.styled';
+import { ButtonIcon } from 'components/UserMenu/userMenu.styled';
 
 const LoginForm = () => {
   const [show, setShow] = useState(false);
