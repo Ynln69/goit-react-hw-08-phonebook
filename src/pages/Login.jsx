@@ -1,5 +1,5 @@
 import LoginForm from 'components/LoginForm/LoginForm';
-import { RegisterBox, RegisterSection } from './register.styled';
+import { RegisterBox, RegisterSection } from './Register.styled';
 
 const Login = () => {
   return (

@@ -3,7 +3,7 @@ import { ReactComponent as SearchIcon } from './../../images/search.svg';
 
 import { getContactsFilter } from 'redux/filterSlice';
 import { FilterBox } from './filter.styled';
-import { FormLabel, FormInput } from 'components/PhoneForm/phoneForm.styled';
+import { FormLabel, FormInput } from 'components/PhoneForm/PhoneForm.styled';
 
 const FilterContacts = () => {
   const changeFilter = e => {

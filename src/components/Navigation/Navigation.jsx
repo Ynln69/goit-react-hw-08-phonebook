@@ -1,5 +1,5 @@
 import { useAuth } from 'hooks';
-import { NavContainer } from './navigation.styled';
+import { NavContainer } from './Navigation.styled';
 import { Link } from 'components/AppBar/appBar.styled';
 
 const Navigation = () => {

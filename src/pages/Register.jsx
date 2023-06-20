@@ -1,5 +1,5 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
-import { RegisterSection, RegisterBox } from './register.styled';
+import { RegisterSection, RegisterBox } from './Register.styled';
 
 const Register = () => {
   return (
