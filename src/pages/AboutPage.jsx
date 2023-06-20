@@ -7,7 +7,7 @@ import {
   Title,
 } from './AboutPage.styled';
 
-const About = () => {
+const AboutPage = () => {
   return (
     <AboutSection>
       <BoxInfo>
@@ -40,4 +40,4 @@ const About = () => {
     </AboutSection>
   );
 };
-export default About;
+export default AboutPage;
